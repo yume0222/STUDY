@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="当サービスに関するお問い合わせは、お問い合わせフォームよりお願いいたします。"
+    />
+    <title>お問い合わせ | STUDY</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="index.html" class="header__logo-link">
+          <img
+            src="img/common/logo.svg"
+            class="header__logo-image"
+            alt="STUDY"
+          />
+        </a>
+      </div>
+      <nav
+        class="header__nav"
+        id="global-nav"
+        aria-label="グローバルナビゲーション"
+      >
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">トップ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="service.html" class="header__nav-link">サービス</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="price.html" class="header__nav-link">料金</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="contact.html" aria-current="page" class="header__nav-link"
+              >お問い合わせ</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="header__hamburger"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="global-nav"
+      >
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+      <div class="header__mask"></div>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="c-page-header">
+        <h1 class="c-page-header__title">
+          <span class="c-page-header__title-ja">お問い合わせ</span>
+          <span class="c-page-header__title-en">CONTACT</span>
+        </h1>
+      </div>
+      <div class="c-page-header__text l-wrapper">
+        <p class="c-page-header__lead">
+          まずはお気軽にお問い合わせください。<br class="u-hidden-pc" />
+        </p>
+        <p class="c-page-header__description">
+          お問い合わせは下記のフォームからお願いいたします。<br />
+          3営業日以内にご返信いたします。
+        </p>
+      </div>
+      <!-- ContactForm Section -->
+      <section class="contact-form l-wrapper">
+        <h2 class="c-section-title">お問い合わせフォーム</h2>
+        <form class="contact-form__form" action="#" method="post">
+          <div class="contact-form__list">
+            <fieldset class="contact-form__item">
+              <legend class="contact-form__label">
+                種類<span class="contact-form__required">*</span>
+              </legend>
+              <div class="contact-form__field contact-form__field--radio">
+                <label class="contact-form__radio">
+                  <input type="radio" name="kind" value="service" required />
+                  サービスに関するお問い合わせ</label
+                >
+                <label class="contact-form__radio">
+                  <input
+                    type="radio"
+                    name="kind"
+                    value="interview"
+                  />取材に関するお問い合わせ</label
+                >
+                <label class="contact-form__radio">
+                  <input
+                    type="radio"
+                    name="kind"
+                    value="document"
+                  />資料請求</label
+                >
+                <label class="contact-form__radio">
+                  <input type="radio" name="kind" value="other" />その他</label
+                >
+              </div>
+            </fieldset>
+            <div class="contact-form__item">
+              <label for="company" class="contact-form__label">会社名</label>
+              <div class="contact-form__field">
+                <input
+                  class="contact-form__control contact-form__control--input"
+                  id="company"
+                  type="text"
+                  name="company"
+                />
+              </div>
+            </div>
+            <div class="contact-form__item">
+              <label for="name" class="contact-form__label"
+                >お名前<span class="contact-form__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+              <div class="contact-form__field">
+                <input
+                  class="contact-form__control contact-form__control--input"
+                  id="name"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="contact-form__item">
+              <label for="email" class="contact-form__label"
+                >メールアドレス<span
+                  class="contact-form__required"
+                  aria-hidden="true"
+                  >*</span
+                ></label
+              >
+              <div class="contact-form__field">
+                <input
+                  class="contact-form__control contact-form__control--input"
+                  id="email"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="contact-form__item">
+              <label for="message" class="contact-form__label"
+                >詳細内容<span class="contact-form__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+              <div class="contact-form__field">
+                <textarea
+                  class="contact-form__control contact-form__control--textarea"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form__submit">
+            <input
+              class="contact-form__submit-button"
+              type="submit"
+              value="送信する"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer u-mt-section">
+      <div class="footer__inner l-wrapper">
+        <div class="footer__logo">
+          <img src="img/common/logo.svg" loading="lazy" alt="STUDY" />
+        </div>
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a href="index.html" class="footer__link">トップ</a>
+          </li>
+          <li class="footer__item">
+            <a href="service.html" class="footer__link">サービス</a>
+          </li>
+          <li class="footer__item">
+            <a href="price.html" class="footer__link">料金</a>
+          </li>
+          <li class="footer__item">
+            <a href="contact.html" aria-current="page" class="footer__link"
+              >お問い合わせ</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">
+        <small class="footer__small">
+          Copyright © study. All rights reserved.
+        </small>
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="STUDYは、実践的なプログラミングスキルを習得するためのプログラミング学習講座です。"
+    />
+    <title>STUDY</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/top.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="index.html" class="header__logo-link">
+          <img
+            src="img/common/logo.svg"
+            class="header__logo-image"
+            alt="STUDY"
+          />
+        </a>
+      </h1>
+      <nav
+        class="header__nav"
+        id="global-nav"
+        aria-label="グローバルナビゲーション"
+      >
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" aria-current="page" class="header__nav-link"
+              >トップ</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="service.html" class="header__nav-link">サービス</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="price.html" class="header__nav-link">料金</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="contact.html" class="header__nav-link">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="header__hamburger"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="global-nav"
+      >
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+      <div class="header__mask"></div>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Mainvisual -->
+      <div id="mainvisual" class="mainvisual">
+        <div class="l-wrapper l-wrapper--lg mainvisual__inner">
+          <div class="mainvisual__content">
+            <p class="mainvisual__catch">
+              <span class="mainvisual__line">プログラミングで</span><br />
+              <span class="mainvisual__line mainvisual__line--group">
+                <span>未来の扉を</span
+                ><span class="sp-inline">ひらこう</span></span
+              ><br />
+              <span class="mainvisual__line pc-only">ひらこう</span>
+            </p>
+            <p class="mainvisual__lead">
+              STUDYは実践的なプログラミング力を<br />
+              身につけるための講座です。
+            </p>
+          </div>
+          <div class="mainvisual__image">
+            <img
+              src="img/top/mainvisual.svg"
+              alt="プログラミング学習のイメージ"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Reason Section -->
+    <section class="reason l-wrapper">
+      <h2 class="c-section-title">選ばれる理由</h2>
+      <ul class="reason__list">
+        <li class="reason__item">
+          <div class="reason__image">
+            <img
+              src="img/top/reason1.png"
+              loading="lazy"
+              class="reason__img"
+              alt="質の高い教材"
+            />
+          </div>
+          <p class="reason__title">質の高い教材</p>
+          <p class="reason__text">
+            仕事で使うスキルが凝縮されたハイレベルな学習教材！
+          </p>
+        </li>
+        <li class="reason__item">
+          <div class="reason__image">
+            <img
+              src="img/top/reason2.png"
+              loading="lazy"
+              class="reason__img"
+              alt="充実したサポート"
+            />
+          </div>
+          <p class="reason__title">充実したサポート</p>
+          <p class="reason__text">
+            不明点があれば質問してすぐに解決。個別サポートにも対応！
+          </p>
+        </li>
+        <li class="reason__item">
+          <div class="reason__image">
+            <img
+              src="img/top/reason3.png"
+              loading="lazy"
+              class="reason__img"
+              alt="豊富な実績"
+            />
+          </div>
+          <p class="reason__title">豊富な実績</p>
+          <p class="reason__text">
+            受講者数は1万人を突破！受講生はWEB業界で活躍！
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- Service Section -->
+    <section class="service u-mt-section">
+      <div class="c-feature c-feature--reverse l-wrapper">
+        <div class="c-feature__content">
+          <h2 class="c-feature__heading">
+            <span class="c-feature__heading-en">SERVICE</span>
+            <span class="c-feature__heading-ja">サービス</span>
+          </h2>
+          <p class="c-feature__text">
+            将来プログラミングを仕事にしたい方向けの実践的なプログラミング講座です。
+          </p>
+          <a href="service.html" class="c-feature__link">詳細を見る</a>
+        </div>
+        <div class="c-feature__image">
+          <img
+            src="img/top/service.png"
+            loading="lazy"
+            class="c-feature__img"
+            alt="サービスイメージ"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Price Section -->
+    <section class="price">
+      <div class="c-feature l-wrapper">
+        <div class="c-feature__content">
+          <h2 class="c-feature__heading">
+            <span class="c-feature__heading-en">PRICE</span>
+            <span class="c-feature__heading-ja">料金</span>
+          </h2>
+          <p class="c-feature__text">
+            わかりやすい料金体系で安心してご利用いただけます。
+          </p>
+          <a href="price.html" class="c-feature__link">詳細を見る</a>
+        </div>
+        <div class="c-feature__image">
+          <img
+            src="img/top/price.png"
+            loading="lazy"
+            class="c-feature__img"
+            alt="料金イメージ"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Voice Section -->
+    <section class="voice u-mt-section l-wrapper">
+      <h2 class="c-section-title">ご利用者の声</h2>
+      <div class="voice__item voice__item--reverse">
+        <div class="voice__content">
+          <p class="voice__text">
+            最初は難しかったですがすぐに慣れました。
+            <span class="voice__highlight">楽しみながら勉強できた</span
+            >ので、最後まで続けることができたと思います。
+          </p>
+          <p class="voice__meta">（20代女性）</p>
+        </div>
+        <div class="voice__image">
+          <img
+            src="img/top/voice1.png"
+            loading="lazy"
+            class="voice__img"
+            alt="利用者イメージ"
+          />
+        </div>
+      </div>
+      <div class="voice__item">
+        <div class="voice__content">
+          <p class="voice__text">
+            テキストや動画の教材がたくさんそろっていてスキルアップに役立ちました。<span
+              class="voice__highlight"
+              >好きな時間に勉強できる</span
+            >ので学習の計画を立てやすかったです。
+          </p>
+          <p class="voice__meta">（30代男性）</p>
+        </div>
+        <div class="voice__image">
+          <img
+            src="img/top/voice2.png"
+            loading="lazy"
+            class="voice__img"
+            alt="利用者イメージ"
+          />
+        </div>
+      </div>
+      <div class="voice__item voice__item--reverse">
+        <div class="voice__content">
+          <p class="voice__text">
+            しっかりとサポートしてもらえたので、不明な点はすぐに解決することができました。<span
+              class="voice__highlight"
+              >教え方も丁寧</span
+            >でとても分かりやすかったです。
+          </p>
+          <p class="voice__meta">（40代女性）</p>
+        </div>
+        <div class="voice__image">
+          <img
+            src="img/top/voice3.png"
+            loading="lazy"
+            class="voice__img"
+            alt="利用者イメージ"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact u-mt-section u-mt-section-pc-lg">
+      <div class="contact__inner l-wrapper">
+        <h2 class="c-section-title">お問い合わせ</h2>
+        <p class="contact__text">
+          サービスに関するご不明点は<br
+            class="u-hidden-pc"
+          />下記からお気軽にご連絡ください。
+        </p>
+        <a href="contact.html" class="contact__button">
+          お問い合わせはこちら
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner l-wrapper">
+        <div class="footer__logo">
+          <img src="img/common/logo.svg" loading="lazy" alt="STUDY" />
+        </div>
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a href="index.html" aria-current="page" class="footer__link"
+              >トップ</a
+            >
+          </li>
+          <li class="footer__item">
+            <a href="service.html" class="footer__link">サービス</a>
+          </li>
+          <li class="footer__item">
+            <a href="price.html" class="footer__link">料金</a>
+          </li>
+          <li class="footer__item">
+            <a href="contact.html" class="footer__link">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">
+        <small class="footer__small">
+          Copyright © study. All rights reserved.
+        </small>
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
