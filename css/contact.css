@@ -1,16 +1,119 @@
 @charset "utf-8";
 
-/* ContactForm */
+/*----------------------------------------
+	お問合せ専用
+----------------------------------------*/
+
+/*----------------------------------------
+	Form Parts
+----------------------------------------*/
+/*各フォーム部品の基本スタイルを上書き*/
+input[type="text"],
+input[type="email"],
+input[type="tel"] textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  padding: 15px 10px;
+  border: 1px solid var(--color-gray-300);
+}
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 200px;
+  padding: 15px 10px;
+  border: 1px solid var(--color-gray-300);
+}
+/*フォーカス時*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(55, 149, 47, 0.7);
+}
+
+/*radio
+------------------------------------*/
+input[type="radio"],
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+/*クリック範囲*/
+input[type="radio"] + span {
+  display: inline-block;
+  position: relative;
+  padding: 0.18em 0.18em 0.18em 1.18em;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/*フォーカス時*/
+input[type="radio"]:focus + span {
+  outline: none;
+  box-shadow: 0 0 5px rgba(55, 149, 47, 0.7);
+}
+
+/*ラジオボタンスタイル*/
+input[type="radio"] + span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.8125em;
+  height: 0.8125em;
+  border: 1px solid var(--color-gray-500);
+  border-radius: 50%;
+  background: var(--color-white);
+  transform: translateY(-50%);
+  line-height: 1;
+}
+/*ラジオボタンチェック印（未選択）*/
+input[type="radio"] + span:after {
+  content: "";
+  display: none;
+}
+/*ラジオボタンチェック印（選択）*/
+input[type="radio"]:checked + span:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.12em;
+  width: 0.59em;
+  height: 0.59em;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #37952f;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
+/*----------------------------------------
+	全体レイアウト
+----------------------------------------*/
+.contact-form__item fieldset,
+.contact-form__item legend {
+  display: contents;
+}
 .contact-form__list {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
+@media screen and (min-width: 768px) {
+  .contact-form__list {
+    gap: 40px;
+  }
 }
+
+/*----------------------------------------
+	パーツレイアウト
+----------------------------------------*/
+/*ラベル*/
 .contact-form__label {
   display: flex;
   align-items: center;
@@ -19,29 +122,27 @@ fieldset {
   font-size: 1rem;
   font-weight: 500;
 }
+/*必須ラベル*/
 .contact-form__required {
   color: var(--color-accent);
 }
-.contact-form__field--radio {
+
+/* 種類 */
+.radioList_hr {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.contact-form__radio {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  .radioList_hr {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
-.contact-form__control {
-  width: 100%;
-  height: 50px;
-  padding: 15px 10px;
-  border: 1px solid var(--color-gray-300);
-}
-.contact-form__control--textarea {
-  height: 200px;
-}
+
+/*----------------------------------------
+	送信ボタン
+----------------------------------------*/
 .contact-form__submit {
   margin-top: 25px;
   text-align: center;
@@ -54,13 +155,6 @@ fieldset {
   font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
-  .contact-form__list {
-    gap: 40px;
-  }
-  .contact-form__field--radio {
-    flex-direction: row;
-    gap: 40px;
-  }
   .contact-form__submit {
     margin-top: 40px;
   }

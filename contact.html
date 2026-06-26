@@ -8,7 +8,7 @@
       content="当サービスに関するお問い合わせは、お問い合わせフォームよりお願いいたします。"
     />
     <title>お問い合わせ | STUDY</title>
-    <link rel="icon" href="img/common/favicon.ico">
+    <link rel="icon" href="img/common/favicon.ico" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,7 +66,6 @@
       </button>
       <div class="header__mask"></div>
     </header>
-    <!-- Main -->
     <main>
       <div class="c-page-header">
         <h1 class="c-page-header__title">
@@ -83,95 +82,100 @@
           3営業日以内にご返信いたします。
         </p>
       </div>
-      <!-- ContactForm Section -->
       <section class="contact-form l-wrapper">
         <h2 class="c-section-title">お問い合わせフォーム</h2>
         <form class="contact-form__form" action="#" method="post">
           <div class="contact-form__list">
-            <fieldset class="contact-form__item">
-              <legend class="contact-form__label">
-                種類<span class="contact-form__required">*</span>
-              </legend>
-              <div class="contact-form__field contact-form__field--radio">
-                <label class="contact-form__radio">
-                  <input type="radio" name="kind" value="service" required />
-                  サービスに関するお問い合わせ</label
-                >
-                <label class="contact-form__radio">
-                  <input
-                    type="radio"
-                    name="kind"
-                    value="interview"
-                  />取材に関するお問い合わせ</label
-                >
-                <label class="contact-form__radio">
-                  <input
-                    type="radio"
-                    name="kind"
-                    value="document"
-                  />資料請求</label
-                >
-                <label class="contact-form__radio">
-                  <input type="radio" name="kind" value="other" />その他</label
-                >
-              </div>
-            </fieldset>
+            <!-- 種類 -->
+            <div class="contact-form__item">
+              <fieldset>
+                <legend>
+                  <span class="contact-form__label"
+                    >種類<span class="contact-form__required">*</span></span
+                  >
+                </legend>
+                <div class="contact-form__field">
+                  <ul class="radioList_hr">
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="kind"
+                          value="service"
+                          checked
+                          required
+                        />
+                        <span>サービスに関するお問い合わせ</span></label
+                      >
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="kind"
+                          value="interview"
+                          required
+                        /><span>取材に関するお問い合わせ</span></label
+                      >
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="kind"
+                          value="document"
+                          required
+                        /><span>資料請求</span></label
+                      >
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="kind"
+                          value="other"
+                          required
+                        /><span>その他</span></label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+            <!-- 会社名 -->
             <div class="contact-form__item">
               <label for="company" class="contact-form__label">会社名</label>
               <div class="contact-form__field">
-                <input
-                  class="contact-form__control contact-form__control--input"
-                  id="company"
-                  type="text"
-                  name="company"
-                />
+                <input id="company" type="text" name="company" />
               </div>
             </div>
+            <!-- お名前 -->
             <div class="contact-form__item">
               <label for="name" class="contact-form__label"
-                >お名前<span class="contact-form__required" aria-hidden="true"
-                  >*</span
-                ></label
+                >お名前<span class="contact-form__required">*</span></label
               >
               <div class="contact-form__field">
-                <input
-                  class="contact-form__control contact-form__control--input"
-                  id="name"
-                  type="text"
-                  name="name"
-                  autocomplete="name"
-                  required
-                />
+                <input id="name" type="text" name="name" required />
               </div>
             </div>
+            <!-- メールアドレス -->
             <div class="contact-form__item">
               <label for="email" class="contact-form__label"
-                >メールアドレス<span
-                  class="contact-form__required"
-                  aria-hidden="true"
+                >メールアドレス<span class="contact-form__required"
                   >*</span
                 ></label
               >
               <div class="contact-form__field">
-                <input
-                  class="contact-form__control contact-form__control--input"
-                  id="email"
-                  type="email"
-                  name="email"
-                  autocomplete="email"
-                  required
-                />
+                <input id="email" type="email" name="email" required />
               </div>
             </div>
+            <!-- 詳細内容 -->
             <div class="contact-form__item">
               <label for="message" class="contact-form__label"
-                >詳細内容<span class="contact-form__required" aria-hidden="true"
-                  >*</span
-                ></label
+                >詳細内容<span class="contact-form__required">*</span></label
               >
               <div class="contact-form__field">
                 <textarea
-                  class="contact-form__control contact-form__control--textarea"
                   id="message"
                   name="message"
                   rows="5"
@@ -180,6 +184,7 @@
               </div>
             </div>
           </div>
+          <!-- 送信ボタン -->
           <div class="contact-form__submit">
             <input
               class="contact-form__submit-button"
