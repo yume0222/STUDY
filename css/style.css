@@ -180,9 +180,17 @@ main {
     max-width: 150px;
   }
 }
+
 /*----------------------------------------
 	gnav
 ----------------------------------------*/
+/* 共通 */
+.gnav__list {
+  display: flex;
+}
+.gnav__item {
+  font-size: 0.875rem;
+}
 /* SP専用 */
 @media (max-width: 767px) {
   .gnav {
@@ -199,7 +207,6 @@ main {
     right: 0;
   }
   .gnav__list {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -207,17 +214,11 @@ main {
     padding: 70px 0;
     overflow: auto;
   }
-  .gnav__item {
-    font-size: 0.875rem;
-  }
 }
 /* PC専用 */
 @media screen and (min-width: 768px) {
   .gnav__list {
-    display: flex;
     gap: 40px;
-    width: auto;
-    height: auto;
   }
 }
 
@@ -252,6 +253,7 @@ main {
 .hamburger__line:nth-of-type(3) {
   transform: translate(-50%, 9px);
 }
+/* 閉じる */
 .hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(1) {
   transform: translate(-50%, 0) rotate(-45deg);
 }
