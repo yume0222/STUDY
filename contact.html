@@ -23,46 +23,38 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__logo">
+      <h1 class="header__logo">
         <a href="index.html" class="header__logo-link">
-          <img
-            src="img/common/logo.svg"
-            class="header__logo-image"
-            alt="STUDY"
-          />
+          <img src="img/common/logo.svg" alt="STUDY" />
         </a>
-      </div>
-      <nav
-        class="header__nav"
-        id="global-nav"
-        aria-label="グローバルナビゲーション"
-      >
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="index.html" class="header__nav-link">トップ</a>
+      </h1>
+      <nav class="gnav" id="gnav" aria-label="メインメニュー">
+        <ul class="gnav__list">
+          <li class="gnav__item">
+            <a href="index.html" class="gnav__link">トップ</a>
           </li>
-          <li class="header__nav-item">
-            <a href="service.html" class="header__nav-link">サービス</a>
+          <li class="gnav__item">
+            <a href="service.html" class="gnav__link">サービス</a>
           </li>
-          <li class="header__nav-item">
-            <a href="price.html" class="header__nav-link">料金</a>
+          <li class="gnav__item">
+            <a href="price.html" class="gnav__link">料金</a>
           </li>
-          <li class="header__nav-item">
-            <a href="contact.html" aria-current="page" class="header__nav-link"
+          <li class="gnav__item">
+            <a href="contact.html" aria-current="page" class="gnav__link"
               >お問い合わせ</a
             >
           </li>
         </ul>
       </nav>
       <button
-        class="header__hamburger"
-        aria-label="メニュー"
+        class="hamburger"
+        aria-label="メニューを開く"
         aria-expanded="false"
-        aria-controls="global-nav"
+        aria-controls="gnav"
       >
-        <span class="header__hamburger-line"></span>
-        <span class="header__hamburger-line"></span>
-        <span class="header__hamburger-line"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
       </button>
       <div class="header__mask"></div>
     </header>
