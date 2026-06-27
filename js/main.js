@@ -1,20 +1,62 @@
-const nav = document.querySelector(".header__nav");
-const hamburger = document.querySelector(".header__hamburger");
-const links = document.querySelectorAll(".header__nav-link");
-const mask = document.querySelector(".header__mask");
+document.addEventListener("DOMContentLoaded", function () {
+  const gnav = document.querySelector(".gnav");
+  const hamburger = document.querySelector(".hamburger");
+  const links = document.querySelectorAll(".gnav__link");
+  const mask = document.querySelector(".header__mask");
 
-const toggleMenu = () => {
-  const isOpen = nav.classList.toggle("is-open");
-  hamburger.classList.toggle("is-open");
-  mask.classList.toggle("is-open");
-  hamburger.setAttribute("aria-expanded", isOpen);
-};
-const closeMenu = () => {
-  nav.classList.remove("is-open");
-  hamburger.classList.remove("is-open");
-  mask.classList.remove("is-open");
-};
+  // （メニューが非表示・開く操作
+  const openMenu = () => {
+    hamburger.setAttribute("aria-expanded", "true");
+    hamburger.setAttribute("aria-label", "メニューを閉じる");
+    gnav.setAttribute("aria-hidden", "false");
+    mask.setAttribute("aria-hidden", "false");
+  };
 
-hamburger.addEventListener("click", toggleMenu);
-mask.addEventListener("click", closeMenu);
-links.forEach(link => link.addEventListener("click", closeMenu));
+  // （メニューが展開済・閉じる操作）
+  const closeMenu = () => {
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.setAttribute("aria-label", "メニューを開く");
+    gnav.setAttribute("aria-hidden", "true");
+    mask.setAttribute("aria-hidden", "true");
+  };
+
+  hamburger.addEventListener("click", () => {
+    const expanded = hamburger.getAttribute("aria-expanded");
+    if (expanded === "false") {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  });
+
+  // リンク
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 768) {
+        closeMenu();
+      }
+    });
+  });
+
+  // マスク
+  mask.addEventListener("click", closeMenu);
+
+  //ブレイクポイントをまたいだときの挙動
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+  function handleBreakpointChange(event) {
+    if (event.matches) {
+      // PC用の初期表示
+      gnav.setAttribute("aria-hidden", "false");
+    } else {
+      // SP用の初期表示
+      closeMenu();
+    }
+  }
+
+  // 初期状態の表示を設定
+  handleBreakpointChange(mediaQuery);
+
+  // メディアクエリの変更を監視
+  mediaQuery.addEventListener("change", handleBreakpointChange);
+});
