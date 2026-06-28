@@ -245,7 +245,8 @@ main {
 .l-wrapper {
   max-width: 940px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .l-wrapper--lg {
   max-width: 1120px;
