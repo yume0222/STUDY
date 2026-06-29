@@ -161,11 +161,11 @@ a:focus {
 /*----------------------------------------
 	mask
 ----------------------------------------*/
-.header__mask {
+.mask {
   display: none;
   transition: all 0.5s;
 }
-.header__mask[aria-hidden="false"] {
+.mask[aria-hidden="false"] {
   display: block;
   position: fixed;
   top: 0;
