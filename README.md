@@ -8,7 +8,7 @@ HTML/CSSの基礎から応用までを一通り身につけることを目的に
 ---
 
 ## 使用技術
-HTML, CSS, JavaScript
+HTML / CSS / JavaScript
 
 ---
 
